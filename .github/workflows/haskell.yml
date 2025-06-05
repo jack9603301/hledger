@@ -18,7 +18,8 @@ jobs:
         sudo apt install curl
     - name: Install Heskell
       run: |
-        curl -sSL https://get.haskellstack.org/ | sudo sh -s - -d /usr/bin"
+        wget https://get.haskellstack.org/ -o heskellstack.sh
+        sudo sh ./heskellstack.sh -d /usr/bin/"
         stack init
         stack update
 
