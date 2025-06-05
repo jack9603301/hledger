@@ -1,9 +1,5 @@
 name: Haskell CI
 
-on:
-  push:
-    branches: [ "binaries-linux-arm64" ]
-
 permissions:
   contents: read
 
