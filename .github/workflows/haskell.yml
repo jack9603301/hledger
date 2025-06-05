@@ -26,6 +26,10 @@ jobs:
         cd ..
     - name: Building
       run: |
-        ls -l
         stack update
         stack install
+        mkdir packages-build
+        cd packages-build
+        cp ~/.local/bin/hledger* ./
+        file ./hledger
+        ldd ./hledger
