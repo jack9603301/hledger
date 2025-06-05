@@ -19,8 +19,7 @@ jobs:
     - name: Install Heskell
       run: |
         curl -sSL https://get.haskellstack.org/ -o heskellstack.sh
-        cat heskellstack.sh
-        sudo sh ./heskellstack.sh -d /usr/bin/"
+        sudo bash ./heskellstack.sh -d /usr/bin/"
         stack init
         stack update
 
