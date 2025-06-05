@@ -24,11 +24,8 @@ jobs:
         tar xvf stack-3.5.1-linux-aarch64.tar.gz
         sudo cp stack-3.5.1-linux-aarch64/stack /usr/bin
         cd ..
-    - name: Stack Init
-      run: |
-        stack init
-        stack update
     - name: Building
       run: |
         ls -l
+        stack update
         stack install
