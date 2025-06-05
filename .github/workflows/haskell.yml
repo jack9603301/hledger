@@ -22,10 +22,12 @@ jobs:
         cd build
         wget https://github.com/commercialhaskell/stack/releases/download/v3.5.1/stack-3.5.1-linux-aarch64.tar.gz
         tar xvf stack-3.5.1-linux-aarch64.tar.gz
-        ls -l
+        sudo cp stack-3.5.1-linux-aarch64/stack /usr/bin
+        cd ..
+    - name: Stack Init
+      run: |
         stack init
         stack update
-
     - name: Building
       run: |
         ls -l
